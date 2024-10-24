@@ -22,7 +22,7 @@ a {
 
 .navbar {
   display: flex;
-  background-color: red;
+  background-color: rgb(233, 112, 42);
   height: 10vh;
   justify-content: space-around;
   align-items: center;
@@ -59,7 +59,7 @@ a {
   margin-top: 5%;
   width: 60%;
   height: 70vh;
-  background-color: red;
+  background-color: rgb(233, 112, 42);
   border-radius: 20px;
   flex-direction: column;
 }
