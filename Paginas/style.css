@@ -52,7 +52,7 @@ a {
 /* BANNER */
 
 .banner {
-  height: 70vh;
+  height: 100vh;
   background-image: url("../IMG/1351146.png");
   background-size: cover;
   border-radius: 15px;
