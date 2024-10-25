@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top : 12%;
+  scroll-padding-top: 12%;
 }
 
 body {
@@ -27,7 +27,7 @@ a {
 
 .navbar {
   display: flex;
-  background-color: rgb(233, 112, 42);
+  background-color: #771212;
   height: 10vh;
   justify-content: space-around;
   align-items: center;
@@ -75,24 +75,16 @@ a {
 
 .box-Home .texto {
   display: flex;
-  width: 80%;
+  width: 70%;
   height: auto;
+  padding: 4%;
 }
 
 .texto {
   font-size: 20px;
   justify-content: space-evenly;
   padding: 30px;
-}
-
-.coluna {
-  display: flex;
-  background-color: rgb(161, 159, 159);
-  border-radius: 15px;
-  padding: 10px;
-  width: 30%;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .box-tipos {
@@ -119,9 +111,9 @@ a {
 
 footer {
   display: flex;
-  background-color: rgb(233, 112, 42);
+  background-color: #771212;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 6vh;
   align-self: center;
 }
