@@ -66,30 +66,67 @@ a {
   display: flex;
   width: 100%;
   height: 90vh;
-  background-color: grey;
+  background-color: rgb(90, 89, 89);
 }
 .box-Quiz {
   flex-direction: column;
-
 }
 
 .box-Quiz .sub_titulo {
   display: flex;
   width: 100%;
   height: 20vh;
-justify-content: center;
- align-self: center;
-  
+  justify-content: center;
+  align-self: center;
 }
-.sub_titulo{
+.sub_titulo {
   display: flex;
-  border: 1px solid red;
 }
 
-h1 {
+.sub_titulo h1 {
   display: flex;
-  text-align: center;
   align-items: center;
   align-self: center;
+  font-size: 60px;
+  color: white;
+}
+
+.quizzes {
+  display: flex;
+
+  width: 100%;
+  height: auto;
   justify-content: center;
+}
+
+.imagem-pokebola{
+  display: flex;
+  width: 390px;
+  height: 41vh;
+  background-image:url("..//IMG/image-removebg-preview\ \(1\).png");
+  background-size: cover;
+}
+
+.botao_quiz{
+  display: flex;
+  width: 30%;
+  height: auto;
+  justify-content: center;
+  align-self: center;
+}
+
+.botao_quiz button{
+display: flex;
+width: 55%;
+height: 6vh;
+border-radius: 15px;
+justify-content: center;
+align-items: center;
+background-color: #771212;
+}
+
+.botao_quiz button{
+  display: flex;
+  font-size: 20px;
+  color: white;
 }
