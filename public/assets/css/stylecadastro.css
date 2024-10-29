@@ -62,7 +62,7 @@ a {
 .box-cadastro {
   display: flex;
   width: 35%;
-  height: 70vh;
+  height:auto;
   background-color: #771212;
   opacity: calc(90%);
   border-radius: 15px;
