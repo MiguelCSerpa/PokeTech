@@ -62,7 +62,7 @@ a {
 
 .container {
   display: flex;
-  height: 335vh;
+  height: 385vh;
   flex-direction: column;
 }
 
@@ -81,7 +81,7 @@ a {
 }
 
 .texto {
-  font-size: 25px;
+  font-size: 23px;
   justify-content: space-evenly;
   padding: 15px;
   flex-direction: column;
@@ -96,13 +96,93 @@ a {
 .box-jogos {
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 130vh;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.jogo1 {
+  display: flex;
+  width: 100%;
+  height: 27%;
+  justify-content: space-evenly;
+}
+
+.desc-jogo1 {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+}
+.desc-jogo1 span{
+  font-size: 22px;
+}
+.imagemjogo1 {
+  border: 1px black solid;
+  width: 20%;
+  background-image: url("../IMG/imagem\ Black\ e\ white.jfif");
+  background-size: 380px 305px;
+  background-repeat: no-repeat;
+  border-radius: 9px;
+}
+.jogo2 {
+  display: flex;
+  width: 100%;
+  height: 27%;
+  justify-content: space-evenly;
+}
+
+.desc-jogo2 {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding-right: 2%;
+}
+.imagemjogo2 {
+  border: 1px black solid;
+  width: 20%;
+  background-image: url("../IMG/imagem\ HeartGold.jfif");
+  background-size: 380px 305px;
+  border-radius: 9px;
+}
+
+.desc-jogo2 span{
+  font-size: 22px;
+}
+
+.jogo3 {
+  display: flex;
+  width: 100%;
+  height: 27%;
+  justify-content: space-evenly;
+}
+
+.desc-jogo3 {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.imagemjogo3 {
+  border: 1px black solid;
+  width: 20%;
+  background-image: url("../IMG/imagem\ poKémon\ pearl.jfif");
+  background-size: 380px 305px;
+  border-radius: 9px;
+}
+.desc-jogo3 span{
+  font-size: 22px;
 }
 
 .box-sobre {
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -124,7 +204,7 @@ a {
   display: flex;
   font-size: 25px;
 }
-.subTitulo h1{
+.subTitulo h1 {
   font-weight: 700;
 }
 
@@ -134,7 +214,7 @@ a {
   height: 90%;
   flex-direction: column;
 }
-.descricao span{
+.descricao span {
   font-size: 25px;
 }
 
@@ -165,6 +245,6 @@ footer {
   height: 6vh;
   align-self: center;
 }
-footer p{
-color: white;
+footer p {
+  color: white;
 }
