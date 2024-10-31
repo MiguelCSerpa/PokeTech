@@ -49,6 +49,38 @@ a {
   font-size: 20px;
 }
 
+.logo {
+  display: flex;
+  border: 1px solid black;
+}
+
+.sessoes {
+  display: flex;
+}
+
+.botao {
+  display: flex;
+
+}
+
+.botao button{
+  width: 110px;
+  height: 35px;
+  border: 0px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.botao button:hover{
+  transition: 0.5s;
+  background-color: white;
+  border-radius: 5px;
+  color: #771212;
+  font-size: 20px;
+}
 /* BANNER */
 
 .banner {
@@ -115,7 +147,7 @@ a {
   flex-direction: column;
   padding: 2%;
 }
-.desc-jogo1 span{
+.desc-jogo1 span {
   font-size: 22px;
 }
 .imagemjogo1 {
@@ -149,7 +181,7 @@ a {
   border-radius: 9px;
 }
 
-.desc-jogo2 span{
+.desc-jogo2 span {
   font-size: 22px;
 }
 
@@ -175,7 +207,7 @@ a {
   background-size: 380px 305px;
   border-radius: 9px;
 }
-.desc-jogo3 span{
+.desc-jogo3 span {
   font-size: 22px;
 }
 
