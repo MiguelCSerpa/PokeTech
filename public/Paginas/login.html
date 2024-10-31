@@ -17,7 +17,8 @@
                 </div>
                 <div class="sessoes">
                     <ul>
-                        <li><a href="../Paginas/Index.html">Home</a></li>
+                        <li><button onclick="voltar()">Home</button></li>
+                        <li><button onclick="ircadastro()">Cadastre-se</button></li>
                     </ul>
                 </div>
             </nav>
@@ -45,9 +46,6 @@
                 <div class="botao">
                     <button onclick="Entrar()">Entrar</button>
                 </div>
-                <div class="direcionador-cadastro">
-                    <span>Ainda não possui um cadastro?!</span><a href="../Paginas/cadastro.html">Cadastre-se</a>
-                </div>
             </div>
 
         </div>
@@ -55,3 +53,15 @@
     </main>
 
 </body>
+
+<script>
+
+    function voltar() {
+        window.location.href = "Index.html"
+    }
+
+    function ircadastro(){
+        window.location.href = "cadastro.html"
+    }
+
+</script>

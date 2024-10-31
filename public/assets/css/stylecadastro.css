@@ -45,8 +45,22 @@ a {
   list-style: none;
 }
 
-.navbar ul li a {
+.navbar button {
+  width: 100px;
+  height: 35px;
+  border: 0px;
+  background-color: transparent;
   color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.navbar button:hover {
+  transition: 0.5s;
+  background-color: white;
+  border-radius: 5px;
+  color: #771212;
   font-size: 20px;
 }
 
