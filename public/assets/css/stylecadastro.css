@@ -76,7 +76,7 @@ a {
 .box-cadastro {
   display: flex;
   width: 35%;
-  height:auto;
+  height:65vh;
   background-color: #771212;
   opacity: calc(90%);
   border-radius: 15px;
@@ -101,7 +101,7 @@ a {
 .container {
   display: flex;
   width: 100%;
-  height: 55%;
+  height: 75%;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
