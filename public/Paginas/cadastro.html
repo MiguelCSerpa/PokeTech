@@ -79,6 +79,10 @@
 
         <script>
 
+            var nome_correto = false
+            var email_correto = false
+            var senha_correto = false
+
             function voltar() {
 
                 window.location.href = "index.html"
@@ -104,6 +108,49 @@
                     alert("É necessário preencher todos os campos para poder realizar um cadastro!")
                 }
 
+                //para a lógica do cadastro funcionar
+                if (email_correto == true && nome_correto == true && senha_correto == true) {
+
+                    fetch("/usuarios/cadastrar", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            // crie um atributo que recebe o valor recuperado aqui
+                            // Agora vá para o arquivo routes/usuario.js
+                            nomeServer: nomeVar,
+                            emailServer: emailVar,
+                            senhaServer: senhaVar,
+                            idEmpresaVincularServer: idEmpresaVincular
+                        }),
+                    })
+                        .then(function (resposta) {
+                            console.log("resposta: ", resposta);
+
+                            if (resposta.ok) {
+                                cardErro.style.display = "block";
+
+                                mensagem_erro.innerHTML =
+                                    "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                                setTimeout(() => {
+                                    window.location = "login.html";
+                                }, "2000");
+
+                                limparFormulario();
+                                finalizarAguardar();
+                            } else {
+                                throw "Houve um erro ao tentar realizar o cadastro!";
+                            }
+                        })
+                        .catch(function (resposta) {
+                            console.log(`#ERRO: ${resposta}`);
+                            finalizarAguardar();
+                        });
+
+                    return false;
+                }
             }
 
             function analisar_nomecompleto() {
@@ -116,6 +163,7 @@
                 if (tamanho_nome_completo > 50) {
                     div_mensagem_nome.innerHTML = `Não é possivel cadastrar um nome que possua mais de 50 caracteres`
                 } else {
+                    nome_correto = true
                     div_mensagem_nome.innerHTML = ``
                 }
 
@@ -129,6 +177,7 @@
                 if (tamanho_email_cadastro > 100) {
                     div_mensagem_email.innerHTML = `Não é possivel cadastrar um E-mail que possua mais de 100 caracteres<br>`
                 } else {
+                    email_correto = true
                     div_mensagem_email.innerHTML = ``
                 }
 
@@ -136,34 +185,28 @@
                 if (possui_arroba) {
                     div_mensagem_email.innerHTML = ``
                 } else {
+                    email_correto = true
                     div_mensagem_email.innerHTML += `É necessário que haja um @ em seu E-mail`
                 }
             }
+
             function analisar_senha() {
 
                 var senha_cadastro = ipt_senha_cadastro.value;
                 var tamanho_senha = senha_cadastro.length;
 
+                var possui_numero = senha_cadastro.includes("0") || senha_cadastro.includes("1") || senha_cadastro.includes("2") || senha_cadastro.includes("3") || senha_cadastro.includes("4") || senha_cadastro.includes("5") || senha_cadastro.includes("6") || senha_cadastro.includes("7") || senha_cadastro.includes("8") || senha_cadastro.includes("9");
 
                 if (tamanho_senha < 5) {
                     div_mensagem_senha.innerHTML = `A senha deve ser conter no minimo 5 caracteres<br>`
                 } else if (tamanho_senha > 30) {
                     div_mensagem_senha.innerHTML = `A senha deve ser conter menos do que 30 caracteres<br>`
+                } else if (!possui_numero) {
+                    div_mensagem_senha.innerHTML = `É necessário que exista pelo menos 1 numeral<br>`
                 } else {
+                    senha_correto = true
                     div_mensagem_senha.innerHTML = ``
                 }
-
-
-
-                var possui_numero = senha_cadastro.includes("0") || senha_cadastro.includes("1") || senha_cadastro.includes("2") || senha_cadastro.includes("3") || senha_cadastro.includes("4") || senha_cadastro.includes("5") || senha_cadastro.includes("6") || senha_cadastro.includes("7") || senha_cadastro.includes("8") || senha_cadastro.includes("9");
-
-                if (possui_numero) {
-                    div_mensagem_senha.innerHTML = ``
-                } else {
-                    div_mensagem_senha.innerHTML += `É necessário que exista pelo menos 1 numeral<br>`
-                }
-
-
 
             }
 
