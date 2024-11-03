@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <script src="Sliders.JS" defer></script>
+  <script src="../assets/JS/slider.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <div class="sessoes">
           <ul>
             <li><a href="#section-Home">Home</a></li>
-            <li><a href="#section-tipos">Tipos</a></li>
+            <li><a href="#section_tipos">Tipos</a></li>
             <li><a href="#section-jogos">Jogos</a></li>
             <li><a href="#section-sobre">Sobre mim</a></li>
           </ul>
@@ -27,44 +27,72 @@
         <div class="botao"><button onclick="entrar()">Entrar</button></div>
       </nav>
     </header>
-    <section id="section-Home">
-      <div class="banner"></div>
-    </section>
+    <div class="banner"></div>
     <div class="container">
-      <div class="box-Home">
-        <div class="texto">
-          <span>&nbsp;&nbsp;&nbsp;Criada por Satoshi Tajiri, e lançada pela Nintendo em parceria com a Game Freake em
-            1996. Pokémon se
-            tornou uma das maiores franquias do mundo atual, tendo parceria não apenas em jogos, mas também em séries,
-            filmes e cartas colecionáveis (Pokémon TCG).</span>
-          <br>
-          <span> &nbsp;&nbsp;&nbsp;Desenvolvida inicialmente para Game boy, a franquia se passa em um universo chamado
-            “Universo Pokémon”,
-            e é centrada na captura e batalhas de criaturas fictícias conhecidas como Pokémon, criaturas essas que
-            possuem diferentes tipos, formas e habilidades. Dentro deste Universo existem diversas regiões, cada uma com
-            suas próprias características e Pokémon. Dentre elas estão Kanto, Johto, Hoenn, Unova e Sinnoh. </span>
-          <br>
-          <span>&nbsp;&nbsp;&nbsp; Nos jogos, a premissa gira em torno de exploração e batalhas entre treinadores, onde
-            o objetivo
-            principal é conseguir capturar a maior quantidade de Pokémons ou então, vencer a grande liga Pokémon para
-            assim se tornar um grande mestre. Já nas Séries de TV, a animação segue as aventuras de Ash e seus amigos,
-            apresentando diversas batalhas e lições sobre amizade e perseverança. Com um universo vasto e em constante
-            expansão.
-          </span>
-          <br>
-          <span>&nbsp;&nbsp;&nbsp;
-            Dito isso, Pokémon continua a encantar gerações, oferecendo experiências diversificadas que atraem tanto
-            novos fãs quanto veteranos. A franquia não apenas celebra a aventura e a descoberta, mas também promove
-            valores como respeito e a importância das relações interpessoais. </span>
-
-        </div>
-      </div>
-      <section id="section-tipos">
-        <div class="sliders-tipos">
-
-          <div class="lista_tipos">
+      <section id="section-Home">
+        <div class="box-Home">
+          <div class="texto">
+            <span>&nbsp;&nbsp;&nbsp;Criada por Satoshi Tajiri, e lançada pela Nintendo em parceria com a Game Freake em
+              1996. Pokémon se
+              tornou uma das maiores franquias do mundo atual, tendo parceria não apenas em jogos, mas também em séries,
+              filmes e cartas colecionáveis (Pokémon TCG).</span>
+            <br>
+            <span> &nbsp;&nbsp;&nbsp;Desenvolvida inicialmente para Game boy, a franquia se passa em um universo chamado
+              “Universo Pokémon”,
+              e é centrada na captura e batalhas de criaturas fictícias conhecidas como Pokémon, criaturas essas que
+              possuem diferentes tipos, formas e habilidades. Dentro deste Universo existem diversas regiões, cada uma
+              com
+              suas próprias características e Pokémon. Dentre elas estão Kanto, Johto, Hoenn, Unova e Sinnoh. </span>
+            <br>
+            <span>&nbsp;&nbsp;&nbsp; Nos jogos, a premissa gira em torno de exploração e batalhas entre treinadores,
+              onde
+              o objetivo
+              principal é conseguir capturar a maior quantidade de Pokémons ou então, vencer a grande liga Pokémon para
+              assim se tornar um grande mestre. Já nas Séries de TV, a animação segue as aventuras de Ash e seus amigos,
+              apresentando diversas batalhas e lições sobre amizade e perseverança. Com um universo vasto e em constante
+              expansão.
+            </span>
+            <br>
+            <span>&nbsp;&nbsp;&nbsp;
+              Dito isso, Pokémon continua a encantar gerações, oferecendo experiências diversificadas que atraem tanto
+              novos fãs quanto veteranos. A franquia não apenas celebra a aventura e a descoberta, mas também promove
+              valores como respeito e a importância das relações interpessoais. </span>
 
           </div>
+        </div>
+      </section>
+      <section class="slider" id="section_tipos">
+        <div class="slider_tipos">
+
+          <div class="slider-container">
+            <div class="slide-element" id="1"><img src="../assets/IMG/1357289.png" alt="tipo_agua" style="width: 100%;">
+            </div>
+            <div class="slide-element" id="2"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="3"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="4"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="5"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="6"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="7"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="8"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="9"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="10"><img src="" alt="" style="width: 100%;"></div>
+            <div class="slide-element" id="11"><img src="" alt="" style="width: 100%;"></div>
+          </div>
+
+          <div class="seletores">
+            <label id="seletor1" class="seletor"></label>
+            <label id="seletor2" class="seletor"></label>
+            <label id="seletor3" class="seletor"></label>
+            <label id="seletor4" class="seletor"></label>
+            <label id="seletor5" class="seletor"></label>
+            <label id="seletor6" class="seletor"></label>
+            <label id="seletor7" class="seletor"></label>
+            <label id="seletor8" class="seletor"></label>
+            <label id="seletor9" class="seletor"></label>
+            <label id="seletor10" class="seletor"></label>
+            <label id="seletor11" class="seletor"></label>
+          </div>
+
         </div>
       </section>
 
