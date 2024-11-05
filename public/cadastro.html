@@ -65,6 +65,12 @@
                         <input oninput="analisar_senha()" type="password" id="ipt_senha_cadastro">
                         <div id="div_mensagem_senha"></div>
                     </div>
+                    <div class="campos">
+                        <span>Confirmar senha:</span>
+
+                        <input oninput="analisar_confirmacao_senha()" type="password" id="ipt_confirmar_senha_cadastro">
+                        <div id="div_mensagem_confirmacao"></div>
+                    </div>
                     <div class="box_btns">
                         <div class="botao">
                             <button onclick="cadastrar()">Cadastrar</button>
@@ -82,6 +88,7 @@
             var nome_correto = false
             var email_correto = false
             var senha_correto = false
+            var confirmacao_correta = false
 
             function voltar() {
 
@@ -102,14 +109,15 @@
                 var genero_cadastro = slt_genero.value
                 var nascimento_cadastro = ipt_nascimento.value
                 var senha_cadastro = ipt_senha_cadastro.value
+                var confirmacao_senha = ipt_confirmar_senha_cadastro.value;
 
 
-                if (nome_completo == "" || email_cadastro == "" || genero_cadastro == "#" || nascimento_cadastro == "" || senha_cadastro == "") {
+                if (nome_completo == "" || email_cadastro == "" || genero_cadastro == "#" || nascimento_cadastro == "" || senha_cadastro == "" || confirmacao_senha == "") {
                     alert("É necessário preencher todos os campos para poder realizar um cadastro!")
                 }
 
                 //para a lógica do cadastro funcionar
-                if (email_correto == true && nome_correto == true && senha_correto == true) {
+                if (email_correto == true && nome_correto == true && senha_correto == true && confirmacao_correta == true) {
 
                     fetch("/usuarios/cadastrar", {
                         method: "POST",
@@ -119,38 +127,28 @@
                         body: JSON.stringify({
                             // crie um atributo que recebe o valor recuperado aqui
                             // Agora vá para o arquivo routes/usuario.js
-                            nomeServer: nomeVar,
-                            emailServer: emailVar,
-                            senhaServer: senhaVar,
-                            idEmpresaVincularServer: idEmpresaVincular
+                            nomeServer: nome_completo,
+                            emailServer: email_cadastro,
+                            generoServer: genero_cadastro,
+                            nascimentoServer: nascimento_cadastro,
+                            senhaServer: senha_cadastro,
+                            confirmacaoServer: confirmacao_senha
                         }),
                     })
                         .then(function (resposta) {
                             console.log("resposta: ", resposta);
 
-                            if (resposta.ok) {
-                                cardErro.style.display = "block";
-
-                                mensagem_erro.innerHTML =
-                                    "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                                setTimeout(() => {
-                                    window.location = "login.html";
-                                }, "2000");
-
-                                limparFormulario();
-                                finalizarAguardar();
-                            } else {
-                                throw "Houve um erro ao tentar realizar o cadastro!";
-                            }
+                            
                         })
                         .catch(function (resposta) {
                             console.log(`#ERRO: ${resposta}`);
-                            finalizarAguardar();
                         });
 
                     return false;
                 }
+
+window.location.href = "login.html"
+
             }
 
             function analisar_nomecompleto() {
@@ -210,6 +208,20 @@
 
             }
 
+            function analisar_confirmacao_senha() {
 
+                var senha_cadastro = ipt_senha_cadastro.value;
+                var confirmacao_senha = ipt_confirmar_senha_cadastro.value;
+
+
+                if (senha_cadastro != confirmacao_senha) {
+                    div_mensagem_confirmacao.innerHTML = `Confirmação incorreta`
+                } else {
+                    div_mensagem_confirmacao.innerHTML = ``
+                    confirmacao_correta = true
+                }
+
+
+            }
 
         </script>

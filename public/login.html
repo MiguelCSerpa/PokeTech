@@ -82,8 +82,8 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
+                emailServer: email_login,
+                senhaServer: senha_login
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -92,15 +92,14 @@
                 console.log(resposta);
 
                 resposta.json().then(json => {
-                    console.log(json);
+                    console.log(json[0]);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.EMAIL_USUARIO = json[0].email;
+                    sessionStorage.NOME_USUARIO = json[0].nome_completo;
+                    sessionStorage.ID_USUARIO = json[0].idUsuario;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./pagina_usuario.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
