@@ -11,28 +11,22 @@ senha varchar(30),
 confirmacao_senha varchar(30)
 );
 
-CREATE TABLE Sessao(
-idSessao int primary key auto_increment,
-inicio datetime,
-fkUsuario int, constraint fksessaousuario foreign key(fkUsuario)
-references Usuario(idUsuario)
+CREATE TABLE Pergunta(
+idPergunta int primary key auto_increment,
+resposta_certa char(3),
+fkQuiz int, constraint fkQuizPergunta foreign key(fkQuiz)
+	references Quiz(idQuiz)
 );
 
 CREATE TABLE Quiz(
 idQuiz int primary key auto_increment,
-nome varchar(25),
-fkSessao int, constraint fkquizsessao foreign key(fkSessao)
-	references Sessao(idSessao)
+nome varchar(25)
 );
 
-CREATE TABLE Dashboard(
-idDash int primary key auto_increment,
-media_genero varchar(45),
-media_idade varchar(45),
-fkSessao int, constraint fkdashsessao foreign key(fkSessao)
-	references Sessao(idSessao)
+CREATE TABLE Tentativa(
+fkPergunta int, constraint fkTentativaPergunta foreign key(fkPergunta)
+	references Pergunta(idPergunta),
+fkUsuario int, constraint fkTentativaUsuario foreign key(fkUsuario)
+	references Usuario(idUsuario),
+    constraint pkTentativaPerguntaUsuario primary key(fkUsuario, fkPergunta)
 );
-
-
-
-
