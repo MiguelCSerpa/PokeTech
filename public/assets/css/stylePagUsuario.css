@@ -93,10 +93,11 @@ a {
 
 .quizzes {
   display: flex;
-
   width: 100%;
   height: auto;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .imagem-pokebola{
@@ -105,14 +106,17 @@ a {
   height: 41vh;
   background-image:url("..//IMG/image-removebg-preview\ \(1\).png");
   background-size: cover;
+  align-items: center;
 }
 
 .botao_quiz{
   display: flex;
   width: 30%;
-  height: auto;
+  height: 20vh;
   justify-content: center;
   align-self: center;
+  align-items: center;
+
 }
 
 .botao_quiz button{
