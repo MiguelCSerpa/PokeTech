@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../public/assets/css/stylequiz.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="teto">
+            <div class="btn_voltar">
+                <button onclick="voltar()">Voltar</button>
+            </div>
+        </div>
+        <div class="contador_pergunta">
+            <h3>1/10</h3>
+        </div>
+        <div class="img_pergunta">
+            <div class="img_pokemon"></div>
+        </div>
+        <div class="respostas">
+            <div class="box1">
+                <div class="resposta1">
+                    <div class="btn_respostas"><button onclick="">Resposta1</button></div>
+                </div>
+                <div class="resposta2">
+                    <div class="btn_respostas"><button onclick="">Resposta2</button></div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="resposta3">
+                    <div class="btn_respostas"><button onclick="">Resposta3</button></div>
+                </div>
+                <div class="resposta4">
+                    <div class="btn_respostas"><button onclick="">Resposta4</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    var lista_de_questoes = [
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "inkay",
+            alternativaB: "Pikachu",
+            alternativaC: "Eevee",
+            alternativaD: "Blastoise",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Gengar",
+            alternativaB: "Geodude",
+            alternativaC: "Electrabuz",
+            alternativaD: "Rapidash",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Lugia",
+            alternativaB: "Totodile",
+            alternativaC: "Fennekin",
+            alternativaD: "Tiranitar",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Primape",
+            alternativaB: "Vaporeon",
+            alternativaC: "Lapras",
+            alternativaD: "Hounter",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Oshawott",
+            alternativaB: "magikarp",
+            alternativaC: "Altaria",
+            alternativaD: "Axew",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Chicorita",
+            alternativaB: "rayquaza",
+            alternativaC: "Articuno",
+            alternativaD: "Entei",
+            alternativaCorreta: "alternativaD"
+        },
+
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Suicune",
+            alternativaB: "TeddUrsa",
+            alternativaC: "Tangela",
+            alternativaD: "Seaking",
+            alternativaCorreta: "alternativaB"
+        },
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Salamence",
+            alternativaB: "Grooda",
+            alternativaC: "Porygon",
+            alternativaD: "Kabuto",
+            alternativaCorreta: "alternativaC"
+        },
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Snorlax",
+            alternativaB: "Mr.Mime",
+            alternativaC: "Deoxys",
+            alternativaD: "Floragato",
+            alternativaCorreta: "alternativaA"
+        },
+        {
+            pergunta: "Quem é esse Pokémon?",
+            alternativaA: "Palafin",
+            alternativaB: "Quaxly",
+            alternativaC: "Avalugg",
+            alternativaD: "Emolga",
+            alternativaCorreta: "alternativaD"
+        }
+
+    ]
+
+    var pergunta = `Quem é esse pokémon?`
+    var numero_questao_atual = 0
+    var pontuacao_final = 0
+    var tentativas_incorreta = 0
+    var respostas_certas = 0
+    var respostas_erradas = 0
+    var quantidade_questoes = listaDeQuestoes.length
+
+
+
+</script>
