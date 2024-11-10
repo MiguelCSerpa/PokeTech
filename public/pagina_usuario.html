@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usuário</title>
     <link rel="stylesheet" href="../public/assets/css/stylePagUsuario.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -48,7 +49,18 @@
                 </div>
             </section>
             <section id="section-Dash">
-                <div class="box-Dash">
+                <div class="box_Dash">
+                    <div class="gaficos_pizza">
+                        <div class="g_idade">
+                            <canvas id="mychart_idade"></canvas>
+                        </div>
+                        <div class="g_genero">
+                            <canvas id="mychart_genero"></canvas>
+                        </div>
+                    </div>
+                    <div class="grafico_barra">
+                        <canvas id="mychart_acertos"></canvas>
+                    </div>
 
                 </div>
             </section>
@@ -64,5 +76,63 @@
         window.location.href = "quiz.html"
 
     }
+
+</script>
+
+
+
+
+
+<script>
+    const dados_acertos = document.getElementById('mychart_acertos');
+
+    new Chart(dados_acertos, {
+        type: 'bar',
+        data: {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            datasets: [{
+                label: 'Quantidade de acertos por questao',
+                data: [12, 19, 3, 5, 2, 3, 14, 23, 12, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const dados_idade = document.getElementById('mychart_idade');
+
+    new Chart(dados_idade, {
+        type: 'pie',
+        data: {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            datasets: [{
+                label: 'Quantidade de acertos por questao',
+                data: [12, 19, 3, 5, 2, 3, 14, 23, 12, 3],
+                borderWidth: 1
+            }]
+        },
+
+    });
+
+    const dados_genero = document.getElementById('mychart_genero');
+
+    new Chart(dados_genero, {
+        type: 'pie',
+        data: {
+            labels: ['masculino', 'feminino', 'Outros'],
+            datasets: [{
+                label: 'Quantgenero de acertos por questao',
+                data: [12, 19, 3],
+                borderWidth: 1
+            }]
+        },
+
+    });
 
 </script>

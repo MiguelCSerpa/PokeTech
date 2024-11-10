@@ -10,6 +10,7 @@ body {
   padding: 0;
   font-family: "Barlow", sans-serif;
 }
+
 /* HEADER */
 header {
   width: 100%;
@@ -52,7 +53,7 @@ a {
 .container {
   display: flex;
   width: 100%;
-  height: 280vh;
+  height: 278vh;
   flex-direction: column;
 }
 
@@ -68,6 +69,7 @@ a {
   height: 90vh;
   background-color: rgb(90, 89, 89);
 }
+
 .box-Quiz {
   flex-direction: column;
 }
@@ -79,6 +81,7 @@ a {
   justify-content: center;
   align-self: center;
 }
+
 .sub_titulo {
   display: flex;
 }
@@ -100,16 +103,16 @@ a {
   flex-direction: column;
 }
 
-.imagem-pokebola{
+.imagem-pokebola {
   display: flex;
   width: 390px;
   height: 41vh;
-  background-image:url("..//IMG/image-removebg-preview\ \(1\).png");
+  background-image: url("..//IMG/image-removebg-preview\ \(1\).png");
   background-size: cover;
   align-items: center;
 }
 
-.botao_quiz{
+.botao_quiz {
   display: flex;
   width: 30%;
   height: 20vh;
@@ -119,18 +122,63 @@ a {
 
 }
 
-.botao_quiz button{
-display: flex;
-width: 55%;
-height: 6vh;
-border-radius: 15px;
-justify-content: center;
-align-items: center;
-background-color: #771212;
+.botao_quiz button {
+  display: flex;
+  width: 55%;
+  height: 6vh;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: #771212;
 }
 
-.botao_quiz button{
+.botao_quiz button {
   display: flex;
   font-size: 20px;
   color: white;
+}
+
+.box_Dash {
+  display: flex;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 88vh;
+  flex-direction: column;
+}
+
+.gaficos_pizza {
+  display: flex;
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 100%;
+}
+
+.grafico_barra {
+  margin-top: 20px;
+  display: flex;
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+}
+
+.g_idade {
+  display: flex;
+  width: 50%;
+  /* border: 1px red solid; */
+  height: 100%;
+  justify-content: center;
+}
+
+.g_genero {
+  display: flex;
+  /* border: 1px red solid; */
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+
+.g_idade canvas{
+  display: flex;
+  width: 100%;
 }
