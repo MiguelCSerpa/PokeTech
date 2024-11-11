@@ -134,6 +134,7 @@ a {
   border-radius: 15px;
 }
 .slider-container img {
+  height: 100%;
   border-radius: 15px;
 }
 .slide-element {
