@@ -154,6 +154,7 @@ a {
   /* border: 1px solid black; */
   height: 50%;
   width: 100%;
+  padding: 20px;
 }
 
 .grafico_barra {
@@ -171,17 +172,14 @@ a {
   /* border: 1px red solid; */
   height: 100%;
   justify-content: center;
+  padding: 20px;
 }
 
 .g_genero {
   display: flex;
-  /* border: 1px red solid; */
+   /* border: 1px red solid; */
   width: 50%;
   height: 100%;
   justify-content: center;
-}
-
-.g_idade canvas {
-  display: flex;
-  width: 100%;
+  padding: 20px;
 }
