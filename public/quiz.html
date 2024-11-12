@@ -17,12 +17,18 @@
             </div>
         </div>
         <div class="contador_pergunta">
-            <span id="spn_questao_atual"></span>/<span id="spn_qtd">10</span>
+            <span id="spn_questao_atual">1</span>/<span id="spn_qtd">10</span>
         </div>
         <div class="img_pergunta">
-            <div class="img_pokemon"></div>
+            <div class="img_pokemon"><img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'></div>
         </div>
         <div class="respostas">
+            <div class="alternativas"><span>pikachu</span></div>
+            <div class="alternativas"><span>pikachu</span></div>
+            <div class="alternativas"><span>pikachu</span></div>
+            <div class="alternativas"><span>pikachu</span></div>
+        </div>
+        <!-- <div class="respostas">
             <div class="box1">
                 <div class="resposta1">
                     <div class="btn_respostas"><button onclick=""><span id="spnresposta1">1</span></button></div>
@@ -31,7 +37,7 @@
                     <div class="btn_respostas"><button onclick=""><span id="spnresposta2">2</span></button></div>
                 </div>
             </div>
-            <div class="box2">
+            <div class="box1">
                 <div class="resposta3">
                     <div class="btn_respostas"><button onclick=""><span id="spnresposta3">3</span></button></div>
                 </div>
@@ -39,7 +45,7 @@
                     <div class="btn_respostas"><button onclick=""><span id="spnresposta4">4</span></button></div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
 </body>
@@ -58,103 +64,162 @@
     var lista_de_questoes = [
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "inkay",
-            alternativaB: "Pikachu",
-            alternativaC: "Eevee",
-            alternativaD: "Blastoise",
-            alternativaCorreta: "alternativaB"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "inkay", correct: true },
+                { alternativa: "Pikachu" },
+                { alternativa: "Eevee" },
+                { alternativa: "Blastoise" },
+                // { alternativaCorreta: "alternativaB" }
+            ]
+
         },
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Gengar",
-            alternativaB: "Geodude",
-            alternativaC: "Electrabuz",
-            alternativaD: "Rapidash",
-            alternativaCorreta: "alternativaA"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Gengar" },
+                { alternativa: "Geodude", correct: true },
+                { alternativa: "Electrabuz" },
+                { alternativa: "Rapidash" },
+                // { alternativaCorreta: "alternativaA" }
+            ]
         },
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Lugia",
-            alternativaB: "Totodile",
-            alternativaC: "Fennekin",
-            alternativaD: "Tiranitar",
-            alternativaCorreta: "alternativaC"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Lugia" },
+                { alternativa: "Totodile", correct: true },
+                { alternativa: "Fennekin" },
+                { alternativa: "Tiranitar" },
+                // alternativaorreta: "alternativa"
+            ]
         },
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Primape",
-            alternativaB: "Vaporeon",
-            alternativaC: "Lapras",
-            alternativaD: "Hounter",
-            alternativaCorreta: "alternativaC"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Primape" },
+                { alternativa: "Vaporeon", correct: true },
+                { alternativa: "Lapras" },
+                { alternativa: "Hounter" },
+                // alternativaorreta: "alternativa"
+            ]
         },
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Oshawott",
-            alternativaB: "magikarp",
-            alternativaC: "Altaria",
-            alternativaD: "Axew",
-            alternativaCorreta: "alternativaA"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Oshawott", correct: true },
+                { alternativa: "magikarp" },
+                { alternativa: "Altaria" },
+                { alternativa: "Axew" },
+                // alternativaCorreta: "alternativaA"
+
+            ]
         },
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Chicorita",
-            alternativaB: "rayquaza",
-            alternativaC: "Articuno",
-            alternativaD: "Entei",
-            alternativaCorreta: "alternativaD"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Chicorita" },
+                { alternativa: "rayquaza" },
+                { alternativa: "Articuno", correct: true },
+                { alternativa: "Entei" },
+                // alternativaorreta: "alternativa"
+            ]
         },
 
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Suicune",
-            alternativaB: "TeddUrsa",
-            alternativaC: "Tangela",
-            alternativaD: "Seaking",
-            alternativaCorreta: "alternativaB"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Suicune" },
+                { alternativa: "TeddUrsa" },
+                { alternativa: "Tangela", correct: true },
+                { alternativa: "Seaking" },
+                // alternativaorreta: "alternativa"
+            ]
         },
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Salamence",
-            alternativaB: "Grooda",
-            alternativaC: "Porygon",
-            alternativaD: "Kabuto",
-            alternativaCorreta: "alternativaC"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Salamence", correct: true },
+                { alternativa: "Grooda" },
+                { alternativa: "Porygon" },
+                { alternativa: "Kabuto" },
+                // alternativaorreta: "alternativa"
+            ]
         },
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Snorlax",
-            alternativaB: "Mr.Mime",
-            alternativaC: "Deoxys",
-            alternativaD: "Floragato",
-            alternativaCorreta: "alternativaA"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Snorlax" },
+                { alternativa: "Mr.Mime", correct: true },
+                { alternativa: "Deoxys" },
+                { alternativa: "Floragato" },
+                // alternativaorreta: "alternativa"
+            ]
         },
         {
-            pergunta: "Quem é esse Pokémon?",
-            alternativaA: "Palafin",
-            alternativaB: "Quaxly",
-            alternativaC: "Avalugg",
-            alternativaD: "Emolga",
-            alternativaCorreta: "alternativaD"
+            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
+            respostas: [
+                { alternativa: "Palafin" },
+                { alternativa: "Quaxly" },
+                { alternativa: "Avalugg" },
+                { alternativa: "Emolga", correct: true },
+                // alternativaCorreta: "alternativaD"
+            ]
         }
 
     ]
 
+    var numero_enunciado = 1
     var numero_questao_atual = 0
     var pontuacao_final = 0
-    var tentativas_incorreta = 0
     var respostas_certas = 0
     var respostas_erradas = 0
-    var quantidade_questoes = listaDeQuestoes.length
+
+    const alternativas = document.querySelector(".respostas")
+    const imagens = document.querySelector(".img_pokemon")
+
+    function proximapergunta() {
+
+        while (alternativas.firstChild) {
+            alternativas.removeChild(alternativas.firstChild)
+        }
+
+        numero_enunciado++
+        numero_questao_atual++
+
+    
+
+    imagens.innerHTML = lista_de_questoes[numero_questao_atual].pergunta;
+
+    console.log(lista_de_questoes[numero_questao_atual].pergunta)
 
 
+    lista_de_questoes[numero_questao_atual].respostas.forEach(answer => {
+        const nova_pergunta = document.createElement("span");
+        nova_pergunta.classList.add("alternativas");
+        console.log(answer)
+        nova_pergunta.innerText = answer.alternativa
+        spn_questao_atual.innerText = numero_enunciado;
+        if (answer.correct) {
+            nova_pergunta.dataset.correct = answer.correct
+        }
+        nova_pergunta.addEventListener("click", select_alternativa)
+        alternativas.appendChild(nova_pergunta);
+    }
+    )
+}
+
+alternativas.addEventListener("click", proximapergunta)
 
 
+    function select_alternativa(event) {
+        console.log("foi")
+        const alternativa_selecionada = event.target
+    }
 
 </script>
