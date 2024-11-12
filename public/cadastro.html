@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="../public/assets/css/stylecadastro.css" />
+    <link rel="stylesheet" href="assets/css/stylecadastro.css" />
 </head>
 
 <body>
@@ -85,6 +85,7 @@
 
         <script>
 
+            var lista_nome = []
             var nome_correto = false
             var email_correto = false
             var senha_correto = false
@@ -110,6 +111,20 @@
                 var nascimento_cadastro = ipt_nascimento.value
                 var senha_cadastro = ipt_senha_cadastro.value
                 var confirmacao_senha = ipt_confirmar_senha_cadastro.value;
+
+
+
+
+                if (lista_nome.includes[nome_completo]) {
+
+                    alert("Este nome já está sendo utilizado por outra pessoa")
+
+                } else {
+
+                    lista_nome.push(nome_completo)
+
+                }
+
 
 
                 if (nome_completo == "" || email_cadastro == "" || genero_cadastro == "#" || nascimento_cadastro == "" || senha_cadastro == "" || confirmacao_senha == "") {
@@ -160,7 +175,8 @@
 
                 if (tamanho_nome_completo > 50) {
                     div_mensagem_nome.innerHTML = `Não é possivel cadastrar um nome que possua mais de 50 caracteres`
-                } else {
+                } else if (lista) { }
+                else {
                     nome_correto = true
                     div_mensagem_nome.innerHTML = ``
                 }
