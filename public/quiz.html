@@ -13,11 +13,11 @@
     <div class="container">
         <div class="teto">
             <div class="btn_voltar">
-                <button onclick="voltar()">Voltar</button>
+                <button onclick="voltar()">⤺Voltar</button>
             </div>
         </div>
         <div class="contador_pergunta">
-            <h3>1/10</h3>
+            <span id="spn_questao_atual"></span>/<span id="spn_qtd">10</span>
         </div>
         <div class="img_pergunta">
             <div class="img_pokemon"></div>
@@ -25,18 +25,18 @@
         <div class="respostas">
             <div class="box1">
                 <div class="resposta1">
-                    <div class="btn_respostas"><button onclick="">Resposta1</button></div>
+                    <div class="btn_respostas"><button onclick=""><span id="spnresposta1">1</span></button></div>
                 </div>
                 <div class="resposta2">
-                    <div class="btn_respostas"><button onclick="">Resposta2</button></div>
+                    <div class="btn_respostas"><button onclick=""><span id="spnresposta2">2</span></button></div>
                 </div>
             </div>
             <div class="box2">
                 <div class="resposta3">
-                    <div class="btn_respostas"><button onclick="">Resposta3</button></div>
+                    <div class="btn_respostas"><button onclick=""><span id="spnresposta3">3</span></button></div>
                 </div>
                 <div class="resposta4">
-                    <div class="btn_respostas"><button onclick="">Resposta4</button></div>
+                    <div class="btn_respostas"><button onclick=""><span id="spnresposta4">4</span></button></div>
                 </div>
             </div>
         </div>
@@ -146,7 +146,6 @@
 
     ]
 
-    var pergunta = `Quem é esse pokémon?`
     var numero_questao_atual = 0
     var pontuacao_final = 0
     var tentativas_incorreta = 0
