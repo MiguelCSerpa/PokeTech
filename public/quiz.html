@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -178,7 +178,6 @@
                 // alternativaCorreta: "alternativaD"
             ]
         }
-
     ]
 
     var numero_enunciado = 1
@@ -199,29 +198,29 @@
         numero_enunciado++
         numero_questao_atual++
 
-    
-
-    imagens.innerHTML = lista_de_questoes[numero_questao_atual].pergunta;
-
-    console.log(lista_de_questoes[numero_questao_atual].pergunta)
 
 
-    lista_de_questoes[numero_questao_atual].respostas.forEach(answer => {
-        const nova_pergunta = document.createElement("span");
-        nova_pergunta.classList.add("alternativas");
-        console.log(answer)
-        nova_pergunta.innerText = answer.alternativa
-        spn_questao_atual.innerText = numero_enunciado;
-        if (answer.correct) {
-            nova_pergunta.dataset.correct = answer.correct
+        imagens.innerHTML = lista_de_questoes[numero_questao_atual].pergunta;
+
+        console.log(lista_de_questoes[numero_questao_atual].pergunta)
+
+
+        lista_de_questoes[numero_questao_atual].respostas.forEach(answer => {
+            const nova_pergunta = document.createElement("span");
+            nova_pergunta.classList.add("alternativas");
+            console.log(answer)
+            nova_pergunta.innerText = answer.alternativa
+            spn_questao_atual.innerText = numero_enunciado;
+            if (answer.correct) {
+                nova_pergunta.dataset.correct = answer.correct
+            }
+            nova_pergunta.addEventListener("click", select_alternativa)
+            alternativas.appendChild(nova_pergunta);
         }
-        nova_pergunta.addEventListener("click", select_alternativa)
-        alternativas.appendChild(nova_pergunta);
+        )
     }
-    )
-}
 
-alternativas.addEventListener("click", proximapergunta)
+    alternativas.addEventListener("click", proximapergunta)
 
 
     function select_alternativa(event) {

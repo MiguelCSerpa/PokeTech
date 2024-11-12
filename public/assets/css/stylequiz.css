@@ -77,7 +77,14 @@ body {
 .img_pokemon {
     display: flex;
     border-radius: 10px;
-    width: 40%;
+    justify-content: center;
+    width: 80%;
+}
+.img_pokemon img {
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    width: 50%;
 }
 
 .respostas {
