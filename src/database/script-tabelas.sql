@@ -7,9 +7,10 @@ nome_completo varchar(50),
 email varchar(100),
 genero varchar(25),
 nascimento date,
-senha varchar(30),
-confirmacao_senha varchar(30)
+senha varchar(30)
 );
+
+select * from Usuario;
 
 CREATE TABLE Pergunta(
 idPergunta int primary key auto_increment,
