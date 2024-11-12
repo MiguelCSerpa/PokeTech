@@ -24,7 +24,7 @@ function autenticar(req, res) {
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                     }
-                    
+
                 }
 
             ).catch(
@@ -45,7 +45,6 @@ function cadastrar(req, res) {
     var genero = req.body.generoServer;
     var nascimento = req.body.nascimentoServer;
     var senha = req.body.senhaServer;
-    var confirmacao = req.body.confirmacaoServer;
 
 
     // Faça as validações dos valores
@@ -54,17 +53,15 @@ function cadastrar(req, res) {
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (genero == undefined) {
-        res.status(400).send("Seu genero a vincular está undefined!"); 
-    }  else if (nascimento == undefined) {
+        res.status(400).send("Seu genero a vincular está undefined!");
+    } else if (nascimento == undefined) {
         res.status(400).send("Sua data de nascimento a vincular está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (confirmacao == undefined) {
-        res.status(400).send("Sua confirmacao a vincular está undefined!");
-    }else {
+    } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, genero, nascimento, senha, confirmacao)
+        usuarioModel.cadastrar(nome, email, genero, nascimento, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

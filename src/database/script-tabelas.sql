@@ -10,8 +10,6 @@ nascimento date,
 senha varchar(30)
 );
 
-select * from Usuario;
-
 CREATE TABLE Pergunta(
 idPergunta int primary key auto_increment,
 resposta_certa char(3),
