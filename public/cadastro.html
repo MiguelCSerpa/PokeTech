@@ -103,79 +103,17 @@
 
             }
 
-            function cadastrar() {
-
-                var nome_completo = ipt_Nome_Completo_cadastro.value
-                var email_cadastro = ipt_Email_cadastro.value
-                var genero_cadastro = slt_genero.value
-                var nascimento_cadastro = ipt_nascimento.value
-                var senha_cadastro = ipt_senha_cadastro.value
-                var confirmacao_senha = ipt_confirmar_senha_cadastro.value;
-
-
-
-
-                if (lista_nome.includes[nome_completo]) {
-
-                    alert("Este nome já está sendo utilizado por outra pessoa")
-
-                } else {
-
-                    lista_nome.push(nome_completo)
-
-                }
-
-
-
-                if (nome_completo == "" || email_cadastro == "" || genero_cadastro == "#" || nascimento_cadastro == "" || senha_cadastro == "" || confirmacao_senha == "") {
-                    alert("É necessário preencher todos os campos para poder realizar um cadastro!")
-                }
-
-                //para a lógica do cadastro funcionar
-                if (email_correto == true && nome_correto == true && senha_correto == true && confirmacao_correta == true) {
-
-                    fetch("/usuarios/cadastrar", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            // crie um atributo que recebe o valor recuperado aqui
-                            // Agora vá para o arquivo routes/usuario.js
-                            nomeServer: nome_completo,
-                            emailServer: email_cadastro,
-                            generoServer: genero_cadastro,
-                            nascimentoServer: nascimento_cadastro,
-                            senhaServer: senha_cadastro,
-                            confirmacaoServer: confirmacao_senha
-                        }),
-                    })
-                        .then(function (resposta) {
-                            console.log("resposta: ", resposta);
-
-
-                        })
-                        .catch(function (resposta) {
-                            console.log(`#ERRO: ${resposta}`);
-                        });
-
-                    return false;
-                }
-
-                window.location.href = "login.html"
-
-            }
-
+            
             function analisar_nomecompleto() {
 
                 var nome_completo = ipt_Nome_Completo_cadastro.value
                 var tamanho_nome_completo = nome_completo.length;
-
+                
 
 
                 if (tamanho_nome_completo > 50) {
                     div_mensagem_nome.innerHTML = `Não é possivel cadastrar um nome que possua mais de 50 caracteres`
-                } else if (lista) { }
+                }
                 else {
                     nome_correto = true
                     div_mensagem_nome.innerHTML = ``
@@ -239,5 +177,65 @@
 
 
             }
+            
+            function cadastrar() {
 
+                var nome_completo = ipt_Nome_Completo_cadastro.value
+                var email_cadastro = ipt_Email_cadastro.value
+                var genero_cadastro = slt_genero.value
+                var nascimento_cadastro = ipt_nascimento.value
+                var senha_cadastro = ipt_senha_cadastro.value
+                var confirmacao_senha = ipt_confirmar_senha_cadastro.value;
+
+
+
+
+                if (lista_nome.includes(nome_completo)) {
+
+                    alert("Este nome já está sendo utilizado por outra pessoa")
+
+                } else {
+
+                    lista_nome.push(nome_completo)
+                    nome_correto = true
+                }
+
+                if (nome_completo == "" || email_cadastro == "" || genero_cadastro == "#" || nascimento_cadastro == "" || senha_cadastro == "" || confirmacao_senha == "") {
+                    alert("É necessário preencher todos os campos para poder realizar um cadastro!")
+                }
+
+                //para a lógica do cadastro funcionar
+                if (email_correto == true && nome_correto == true && senha_correto == true && confirmacao_correta == true) {
+
+                    fetch("/usuarios/cadastrar", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            // crie um atributo que recebe o valor recuperado aqui
+                            // Agora vá para o arquivo routes/usuario.js
+                            nomeServer: nome_completo,
+                            emailServer: email_cadastro,
+                            generoServer: genero_cadastro,
+                            nascimentoServer: nascimento_cadastro,
+                            senhaServer: senha_cadastro,
+                            confirmacaoServer: confirmacao_senha
+                        }),
+
+                    })
+                        .then(function (resposta) {
+                            console.log("resposta: ", resposta);
+
+
+                        })
+                        .catch(function (resposta) {
+                            console.log(`#ERRO: ${resposta}`);
+                        });
+
+                    return false;
+                }
+
+
+            }
         </script>
