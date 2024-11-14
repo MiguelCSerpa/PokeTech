@@ -141,10 +141,17 @@
             </div>
 
             <div class="pergunta" id="div_final">
-                <div class="mensagem_final">
-                    <h1>Parabén! Você finalizou o quiz!!</h1>
-                    <br>
-                    <p> De um total de 10 Questões você acertou <span id="spn_resultado"></span></p>
+                <div class="caixa_final">
+                    <div class="mensagem_final">
+                        <div class="titulo_f">
+                            <h1>Parabéns! Você finalizou o quiz!!</h1>
+                        </div>
+                        <div class="frase_f">
+                            <p> De um total de 10 Questões você obteve:</p>
+                            <br><br>
+                           <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -187,7 +194,8 @@
         }
 
         document.getElementById('spn_contador').innerHTML = `${pergunta_atual}`
-        document.getElementById('spn_resultado').innerHTML = `${acertos}`
+        document.getElementById('spn_acertos').innerHTML = `${acertos}`
+        document.getElementById('spn_erros').innerHTML = `${erros}`
     }
 
 
