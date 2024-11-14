@@ -1,58 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="assets/css/stylequiz.css">
+    <title>paginaQuiz</title>
+    <link rel="stylesheet" href="./assets/css/sylequiz.css">
 </head>
 
 <body>
 
     <div class="container">
-        <div class="teto">
-            <div class="btn_voltar">
-                <button onclick="voltar()">⤺Voltar</button>
+        <div class="voltar_usuario"><button onclick="voltar()">Voltar</button></div>
+        <div class="contador"><span id="spn_contador">1</span>/10</div>
+
+        <div class="box">
+
+
+            <div class="pergunta" id="div_pergunta1">
+
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse pokémon(Carracosta).jfif" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(1, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(1, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(1, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(1, 'pikachu')">Pikachu</button>
+                </div>
+
             </div>
-        </div>
-        <div class="contador_pergunta">
-            <span id="spn_questao_atual">1</span>/<span id="spn_qtd">10</span>
-        </div>
-        <div class="img_pergunta">
-            <div class="img_pokemon"><img src='assets/IMG/Quem é esse pokemon(dragonite).webp'></div>
-        </div>
-        <div class="respostas">
-            <div class="alternativas"><span>Dragonite</span></div>
-            <div class="alternativas"><span>pikachu</span></div>
-            <div class="alternativas"><span>Eevee</span></div>
-            <div class="alternativas"><span>Blastoise</span></div>
-        </div>
-        <!-- <img src="../public/assets/IMG/Quem é esse Pokémon(Arcanine).webp" alt=""> -->
-        <!-- <img src="../public/assets/IMG/Quem é esse pokémon(Carracosta).jfif" alt=""> -->
-        <!-- <img src="../public/assets/IMG/Quem é esse Pokémon(Eevee).webp" alt=""> -->
-        <!-- <img src="../public/assets/IMG/Quem é esse Pokémon(Jinx).webp" alt=""> -->
-        <!-- <img src="../public/assets/IMG/Quem é esse pokémon(Porygon).webp" alt=""> -->
-        <!-- <img src="../public/assets/IMG/Quem é esse Pokémon(Snorlax).jfif" alt=""> -->
-        <!-- <img src="../public/assets/IMG/Quem é esse pokémon(Taurus).jpeg" alt=""> -->
-        <!-- <div class="respostas">
-            <div class="box1">
-                <div class="resposta1">
-                    <div class="btn_respostas"><button onclick=""><span id="spnresposta1">1</span></button></div>
+            <div class="pergunta" id="div_pergunta2">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/quem é esse Pokémon(alho_poró).webp" alt="">
                 </div>
-                <div class="resposta2">
-                    <div class="btn_respostas"><button onclick=""><span id="spnresposta2">2</span></button></div>
-                </div>
-            </div>
-            <div class="box1">
-                <div class="resposta3">
-                    <div class="btn_respostas"><button onclick=""><span id="spnresposta3">3</span></button></div>
-                </div>
-                <div class="resposta4">
-                    <div class="btn_respostas"><button onclick=""><span id="spnresposta4">4</span></button></div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(2, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(2, 'farfech')">Farfech</button>
+                    <button onclick="proxima_pergunta(2, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(2, 'pikachu')">Pikachu</button>
                 </div>
             </div>
-        </div> -->
+            <div class="pergunta" id="div_pergunta3">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse pokemon(dragonite).webp" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(3, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(3, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(3, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(3, 'dragonite')">Dragonite</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta4">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse Pokémon(Arcanine).webp" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(4, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(4, 'arcanine')">Arcanine</button>
+                    <button onclick="proxima_pergunta(4, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(4, 'pikachu')">Pikachu</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta5">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse Pokémon(Eevee).webp" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(5, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(5, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(5, 'eevee')">Eevee</button>
+                    <button onclick="proxima_pergunta(5, 'pikachu')">Pikachu</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta6">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse Pokémon(Jinx).webp" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(6, 'jinx')">Jinx</button>
+                    <button onclick="proxima_pergunta(6, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(6, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(6, 'pikachu')">Pikachu</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta7">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse pokémon(Porygon).webp" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(7, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(7, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(7, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(7, 'porygon')">Porygon</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta8">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/quem é esse pokémon(slowking).webp" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(8, 'slowking')">Slowking</button>
+                    <button onclick="proxima_pergunta(8, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(8, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(8, 'pikachu')">Pikachu</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta9">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse Pokémon(Snorlax).jfif" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(9, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(9, 'snorlax')">Snorlax</button>
+                    <button onclick="proxima_pergunta(9, 'dratini')">dratini</button>
+                    <button onclick="proxima_pergunta(9, 'pikachu')">Pikachu</button>
+                </div>
+            </div>
+            <div class="pergunta" id="div_pergunta10">
+                <div class="img_pergunta">
+                    <img src="./assets/IMG/Quem é esse pokémon(Taurus).jpeg" alt="">
+                </div>
+
+                <div class="botoes_respostas">
+                    <button onclick="proxima_pergunta(10, 'carracosta')">Carracosta</button>
+                    <button onclick="proxima_pergunta(10, 'vaporeon')">Vaporeon</button>
+                    <button onclick="proxima_pergunta(10, 'taurus')">Taurus</button>
+                    <button onclick="proxima_pergunta(10, 'pikachu')">Pikachu</button>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 </body>
@@ -60,172 +149,35 @@
 </html>
 <script>
 
+    var pergunta_atual = 1
+    var lista_respostas_corretas = { 1: 'carracosta', 2: 'farfech', 3: 'dragonite', 4: 'arcanine', 5: 'eevee', 6: 'jinx', 7: 'porygon', 8: 'slowking', 9: 'snorlax', 10: 'taurus' }
+    var acertos = 0
+    var erros = 0
 
-    function voltar() {
+    function proxima_pergunta(perguntaAtual, resposta) {
 
-        window.location = "pagina_usuario.html"
+        if (resposta == lista_respostas_corretas[perguntaAtual]) {
+            acertos++
+        } else {
+            erros++
+        }
+        // Esconde a pergunta atual
+        document.getElementById('div_pergunta' + pergunta_atual).style.display = 'none';
+
+        pergunta_atual++
+
+        // Mostra a pergunta atual
+        if (pergunta_atual <= 10) {
+            document.getElementById('div_pergunta' + pergunta_atual).style.display = 'block';
+        } else {
+            document.getElementById('div_contador').style.display = 'none'
+            document.getElementById('div_final').style.display = 'block'
+        }
+
+        document.getElementById('spn_contador').innerHTML = `${pergunta_atual}`
 
     }
 
 
-    var lista_de_questoes = [
-
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse pokemon(dragonite).webp'>",
-            respostas: [
-                { alternativa: "Dragonite", correct: true },
-                { alternativa: "Pikachu" },
-                { alternativa: "Eevee" },
-                { alternativa: "Blastoise" },
-                // { alternativaCorreta: "alternativaB" }
-            ]
-
-        },
-
-        {
-            pergunta: "<img src='../public/assets/IMG/quem é esse Pokémon(alho_poró).webp'>",
-            respostas: [
-                { alternativa: "Gengar" },
-                { alternativa: "Farfetch", correct: true },
-                { alternativa: "Electrabuz" },
-                { alternativa: "Rapidash" },
-                // { alternativaCorreta: "alternativaA" }
-            ]
-        },
-
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse Pokémon(Arcanine).webp'>",
-            respostas: [
-                { alternativa: "Lugia" },
-                { alternativa: "Arcanine", correct: true },
-                { alternativa: "Fennekin" },
-                { alternativa: "Tiranitar" },
-                // alternativaorreta: "alternativa"
-            ]
-        },
-
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse pokémon(Carracosta).jfif'>",
-            respostas: [
-                { alternativa: "Primape" },
-                { alternativa: "Carracosta", correct: true },
-                { alternativa: "Lapras" },
-                { alternativa: "Hounter" },
-                // alternativaorreta: "alternativa"
-            ]
-        },
-
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse Pokémon(Eevee).webp'>",
-            respostas: [
-                { alternativa: "Eevee", correct: true },
-                { alternativa: "magikarp" },
-                { alternativa: "Altaria" },
-                { alternativa: "Axew" },
-                // alternativaCorreta: "alternativaA"
-
-            ]
-        },
-
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse Pokémon(Jinx).webp'>",
-            respostas: [
-                { alternativa: "Chicorita" },
-                { alternativa: "rayquaza" },
-                { alternativa: "Jinx", correct: true },
-                { alternativa: "Entei" },
-                // alternativaorreta: "alternativa"
-            ]
-        },
-
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse pokémon(Porygon).webp'>",
-            respostas: [
-                { alternativa: "Suicune" },
-                { alternativa: "TeddUrsa" },
-                { alternativa: "Porygon", correct: true },
-                { alternativa: "Seaking" },
-                // alternativaorreta: "alternativa"
-            ]
-        },
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse Pokémon(Snorlax).jfif'>",
-            respostas: [
-                { alternativa: "Snorlax", correct: true },
-                { alternativa: "Grooda" },
-                { alternativa: "Porygon" },
-                { alternativa: "Kabuto" },
-                // alternativaorreta: "alternativa"
-            ]
-        },
-        {
-            pergunta: "<img src='../public/assets/IMG/quem é esse pokémon(slowking).webp'>",
-            respostas: [
-                { alternativa: "Snorlax" },
-                { alternativa: "Slowking", correct: true },
-                { alternativa: "Deoxys" },
-                { alternativa: "Floragato" },
-                // alternativaorreta: "alternativa"
-            ]
-        },
-        {
-            pergunta: "<img src='../public/assets/IMG/Quem é esse pokémon(Taurus).jpeg'>",
-            respostas: [
-                { alternativa: "Palafin" },
-                { alternativa: "Quaxly" },
-                { alternativa: "Avalugg" },
-                { alternativa: "Taurus", correct: true },
-                // alternativaCorreta: "alternativaD"
-            ]
-        }
-    ]
-
-    var numero_enunciado = 1
-    var numero_questao_atual = 0
-    var pontuacao_final = 0
-    var respostas_certas = 0
-    var respostas_erradas = 0
-
-    const alternativas = document.querySelector(".respostas")
-    const imagens = document.querySelector(".img_pokemon")
-
-    function proximapergunta() {
-
-        while (alternativas.firstChild) {
-            alternativas.removeChild(alternativas.firstChild)
-        }
-
-        numero_enunciado++
-        numero_questao_atual++
-
-
-
-        imagens.innerHTML = lista_de_questoes[numero_questao_atual].pergunta;
-
-        console.log(lista_de_questoes[numero_questao_atual].pergunta)
-
-
-        lista_de_questoes[numero_questao_atual].respostas.forEach(answer => {
-            const nova_pergunta = document.createElement("span");
-            nova_pergunta.classList.add("alternativas");
-            console.log(answer)
-            nova_pergunta.innerText = answer.alternativa
-            spn_questao_atual.innerText = numero_enunciado;
-            if (answer.correct) {
-                nova_pergunta.dataset.correct = answer.correct
-            }
-            nova_pergunta.addEventListener("click", select_alternativa)
-            alternativas.appendChild(nova_pergunta);
-        }
-        )
-    }
-
-    alternativas.addEventListener("click", proximapergunta)
-
-
-    function select_alternativa(event) {
-        console.log("teste")
-        const alternativa_selecionada = event.target
-    }
 
 </script>
