@@ -50,6 +50,30 @@ a {
   font-size: 20px;
 }
 
+.sessoes button {
+  display: flex;
+  width: 100px;
+  height: 4vh;
+  background-color: #771212;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 5px;
+
+}
+
+.sessoes button:hover {
+  display: flex;
+  background-color: white;
+  color: 771212;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -175,9 +199,9 @@ a {
 
 .g_genero {
   display: flex;
-   /* border: 1px red solid; */
+  /* border: 1px red solid; */
   width: 50%;
   height: 100%;
   justify-content: center;
-  
+
 }
