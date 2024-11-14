@@ -12,7 +12,7 @@
 
     <div class="container">
         <div class="voltar_usuario"><button onclick="voltar()">Voltar</button></div>
-        <div class="contador"><span id="spn_contador">1</span>/10</div>
+        <div class="contador" id="div_contador"><span id="spn_contador">1</span>/10</div>
 
         <div class="box">
 
@@ -140,6 +140,13 @@
                 </div>
             </div>
 
+            <div class="pergunta" id="div_final">
+                <div class="mensagem_final">
+                    <h1>Parabén! Você finalizou o quiz!!</h1>
+                    <br>
+                    <p> De um total de 10 Questões você acertou <span id="spn_resultado"></span></p>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -180,7 +187,7 @@
         }
 
         document.getElementById('spn_contador').innerHTML = `${pergunta_atual}`
-
+        document.getElementById('spn_resultado').innerHTML = `${acertos}`
     }
 
 
