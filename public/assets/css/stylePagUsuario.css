@@ -69,7 +69,7 @@ a {
 .sessoes button:hover {
   display: flex;
   background-color: white;
-  color: 771212;
+  color: #771212;
   font-size: 20px;
   transition: 0.5s;
 }
