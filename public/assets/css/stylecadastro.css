@@ -25,7 +25,9 @@ main {
 a {
   text-decoration: none;
 }
-
+a:hover{
+  text-decoration: underline;
+}
 .navbar {
   display: flex;
   background-color: #771212;
