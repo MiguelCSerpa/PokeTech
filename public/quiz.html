@@ -149,7 +149,10 @@
                         <div class="frase_f">
                             <p> De um total de 10 Questões você obteve:</p>
                             <br><br>
-                           <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span> 
+                            <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span>
+                        </div>
+                        <div class="botao_reiniciar">
+                            <button onclick="tentar_novamente()">Tentar Novamente</button>
                         </div>
                     </div>
                 </div>
@@ -164,6 +167,11 @@
 <script>
 
 
+
+    function tentar_novamente() {
+        window.location.href = "quiz.html"
+    }
+
     function voltar() {
         window.location.href = "pagina_usuario.html"
     }
@@ -175,11 +183,13 @@
 
     function proxima_pergunta(perguntaAtual, resposta) {
 
+        // Verifia se a resposta está correta
         if (resposta == lista_respostas_corretas[perguntaAtual]) {
             acertos++
         } else {
             erros++
         }
+
         // Esconde a pergunta atual
         document.getElementById('div_pergunta' + pergunta_atual).style.display = 'none';
 
@@ -193,6 +203,7 @@
             document.getElementById('div_final').style.display = 'block'
         }
 
+        // Span da pagiana de resultados junto ao contador
         document.getElementById('spn_contador').innerHTML = `${pergunta_atual}`
         document.getElementById('spn_acertos').innerHTML = `${acertos}`
         document.getElementById('spn_erros').innerHTML = `${erros}`
