@@ -10,6 +10,7 @@ body {
   padding: 0;
   font-family: "Barlow", sans-serif;
 }
+
 /* HEADER */
 header {
   width: 100%;
@@ -24,8 +25,17 @@ main {
 a {
   text-decoration: none;
 }
-a:hover{
+
+a:hover {
   text-decoration: underline;
+}
+.logo{
+  display: flex;
+  width: 13%;
+  height: 100%;
+}
+.logo img{
+  width: 100%;
 }
 
 .navbar {
@@ -82,6 +92,7 @@ a:hover{
   color: #771212;
   font-size: 20px;
 }
+
 /* BANNER */
 
 .banner {
@@ -128,6 +139,7 @@ a:hover{
   justify-content: center;
   align-items: center;
 }
+
 .slider-container {
   width: 77%;
   height: 90vh;
@@ -136,10 +148,12 @@ a:hover{
   scroll-behavior: smooth;
   border-radius: 15px;
 }
+
 .slider-container img {
   height: 100%;
   border-radius: 15px;
 }
+
 .slide-element {
   background-color: red;
   height: 100%;
@@ -162,10 +176,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor1:hover {
   border: 1px solid rgb(57, 123, 185);
   background-color: rgb(57, 123, 185);
 }
+
 #seletor2 {
   width: 30px;
   height: 30px;
@@ -174,10 +190,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor2:hover {
   border: 1px solid rgb(255, 145, 239);
   background-color: rgb(255, 145, 239);
 }
+
 #seletor3 {
   width: 30px;
   height: 30px;
@@ -186,10 +204,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor3:hover {
   border: 1px solid rgb(185, 106, 52);
   background-color: rgb(185, 106, 52);
 }
+
 #seletor4 {
   width: 30px;
   height: 30px;
@@ -198,10 +218,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor4:hover {
   border: 1px solid rgb(55, 156, 52);
   background-color: rgb(55, 156, 52);
 }
+
 #seletor5 {
   width: 30px;
   height: 30px;
@@ -210,10 +232,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor5:hover {
   border: 1px solid rgb(155, 75, 201);
   background-color: rgb(155, 75, 201);
 }
+
 #seletor6 {
   width: 30px;
   height: 30px;
@@ -222,10 +246,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor6:hover {
   border: 1px solid rgb(17, 219, 255);
   background-color: rgb(17, 219, 255);
 }
+
 #seletor7 {
   width: 30px;
   height: 30px;
@@ -234,10 +260,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor7:hover {
   border: 1px solid rgb(241, 239, 92);
   background-color: rgb(241, 239, 92);
 }
+
 #seletor8 {
   width: 30px;
   height: 30px;
@@ -246,10 +274,12 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor8:hover {
   border: 1px solid rgb(99, 89, 75);
   background-color: rgb(99, 89, 75);
 }
+
 #seletor9 {
   width: 30px;
   height: 30px;
@@ -258,6 +288,7 @@ a:hover{
   cursor: pointer;
   transition: 0.6s;
 }
+
 #seletor9:hover {
   border: 1px solid rgb(53, 9, 94);
   background-color: rgb(53, 9, 94);
@@ -286,9 +317,11 @@ a:hover{
   flex-direction: column;
   padding: 2%;
 }
+
 .desc-jogo1 span {
   font-size: 22px;
 }
+
 .imagemjogo1 {
   border: 1px black solid;
   width: 20%;
@@ -297,6 +330,7 @@ a:hover{
   background-repeat: no-repeat;
   border-radius: 9px;
 }
+
 .jogo2 {
   display: flex;
   width: 100%;
@@ -312,6 +346,7 @@ a:hover{
   flex-direction: column;
   padding-right: 2%;
 }
+
 .imagemjogo2 {
   border: 1px black solid;
   width: 20%;
@@ -346,6 +381,7 @@ a:hover{
   background-size: 380px 305px;
   border-radius: 9px;
 }
+
 .desc-jogo3 span {
   font-size: 22px;
 }
@@ -375,6 +411,7 @@ a:hover{
   display: flex;
   font-size: 25px;
 }
+
 .subTitulo h1 {
   font-weight: 700;
 }
@@ -385,6 +422,7 @@ a:hover{
   height: 90%;
   flex-direction: column;
 }
+
 .descricao span {
   font-size: 25px;
 }
@@ -416,6 +454,7 @@ footer {
   height: 6vh;
   align-self: center;
 }
+
 footer p {
   color: white;
 }
