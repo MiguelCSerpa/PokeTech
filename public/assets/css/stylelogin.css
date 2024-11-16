@@ -26,6 +26,14 @@ a {
 a:hover{
   text-decoration: underline;
 }
+.logo{
+  display: flex;
+  width: 13%;
+  height: 100%;
+}
+.logo img{
+  width: 100%;
+}
 .navbar {
   display: flex;
   background-color: #771212;
