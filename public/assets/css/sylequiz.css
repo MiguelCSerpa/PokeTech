@@ -135,6 +135,11 @@ body {
     border-radius: 10px;
 }
 
+.mensagem_final h1{
+    display: flex;
+    font-size: 60px;
+}
+
 .caixa_final {
     display: flex;
     width: 100%;
