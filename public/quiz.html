@@ -11,7 +11,7 @@
 <body>
 
     <div class="container">
-        <div class="voltar_usuario"><button onclick="voltar()">Voltar</button></div>
+        <div class="voltar_usuario" id="div_voltar_usuario"><button onclick="voltar()">Voltar</button></div>
         <div class="contador" id="div_contador"><span id="spn_contador">1</span>/10</div>
 
         <div class="box">
@@ -151,8 +151,13 @@
                             <br><br>
                             <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span>
                         </div>
-                        <div class="botao_reiniciar">
-                            <button onclick="tentar_novamente()">Tentar Novamente</button>
+                        <div class="botoes_de_acao">
+                            <div class="botao_reiniciar">
+                                <button onclick="tentar_novamente()">Tentar Novamente</button>
+                            </div>
+                            <div class="botao_voltar_usuario">
+                                <button onclick="voltar()">Voltar para o menu</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -200,6 +205,7 @@
             document.getElementById('div_pergunta' + pergunta_atual).style.display = 'block';
         } else {
             document.getElementById('div_contador').style.display = 'none'
+            document.getElementById('div_voltar_usuario').style.display = 'none'
             document.getElementById('div_final').style.display = 'block'
         }
 

@@ -59,6 +59,7 @@ body {
     align-items: center;
     font-size: 25px;
     color: white;
+    align-self: center;
 }
 
 .box {
@@ -131,11 +132,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
+    color: white;
 }
 
-.mensagem_final h1{
+.mensagem_final h1 {
     display: flex;
     font-size: 60px;
 }
@@ -146,6 +146,7 @@ body {
     height: 100%;
     justify-content: center;
     align-items: center;
+    align-self: center;
 }
 
 .titulo_f {
@@ -170,16 +171,17 @@ body {
 .botao_reiniciar {
     display: flex;
     width: 100%;
-    height: 20%;
+    height: 10%;
     justify-content: center;
-    
+    align-items: center;
+
 }
 
-.botao_reiniciar button{
+.botao_reiniciar button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 30%;
     height: 6vh;
     cursor: pointer;
     background-color: #771212;
@@ -189,14 +191,57 @@ body {
     font-size: 17px;
     transition: 0.3s;
 }
-.botao_reiniciar button:hover{
+
+.botao_reiniciar button:hover {
     display: flex;
     font-size: 20px;
-    background-color: black;
-    width: 16%;
+    background-color: rgb(255, 255, 255);
+    color: #771212;
+    width: 33%;
     height: 7vh;
     transition: 0.3s;
 
+}
+
+.botao_voltar_usuario {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botao_voltar_usuario button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 6vh;
+    cursor: pointer;
+    background-color: #771212;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.botao_voltar_usuario button:hover {
+    display: flex;
+    font-size: 20px;
+    background-color: white;
+    color: #771212;
+    width: 33%;
+    height: 7vh;
+    transition: 0.3s;
+}
+
+.botoes_de_acao {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
 }
 
 #spn_acertos {
