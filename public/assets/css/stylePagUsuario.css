@@ -159,12 +159,26 @@ a:hover{
   justify-content: center;
   align-items: center;
   background-color: #771212;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
 }
 
 .botao_quiz button {
   display: flex;
   font-size: 20px;
   color: white;
+}
+
+.botao_quiz button:hover{
+  display: flex;
+  width: 60%;
+  height: 7vh;
+  font-size: 23px;
+  background-color: white;
+  color: #771212;
+  transition: 0.3s;
 }
 
 .box_Dash {

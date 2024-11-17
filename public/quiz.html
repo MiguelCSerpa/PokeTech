@@ -204,6 +204,7 @@
         if (pergunta_atual <= 10) {
             document.getElementById('div_pergunta' + pergunta_atual).style.display = 'block';
         } else {
+            // Retira da pagina a div_contador e a div_voltar_usuario para por no lugar a div_final
             document.getElementById('div_contador').style.display = 'none'
             document.getElementById('div_voltar_usuario').style.display = 'none'
             document.getElementById('div_final').style.display = 'block'
