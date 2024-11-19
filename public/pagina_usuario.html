@@ -86,6 +86,30 @@
 
 
 <script>
+
+    var generos_nomes = [];
+    var generos_quantidade = [];
+
+    fetch("/usuarios/info/genero", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }}
+    ).then(function (resposta) {        
+        console.log("resposta: ", resposta);
+        resposta.json().then(json => {
+                console.log(json)
+                for (i = 0; i < json.length; i++) {
+                    generos_nomes.push(json[i].genero)
+                    generos_quantidade.push(json[i].quantidade)
+                }
+                });
+     
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
     const dados_acertos = document.getElementById('mychart_acertos');
 
     new Chart(dados_acertos, {
@@ -128,15 +152,15 @@
 
     });
 
-    const dados_genero = document.getElementById('mychart_genero');
+    const dados_genero = document.getElementById('mychart_genero');dados_genero
 
     new Chart(dados_genero, {
         type: 'pie',
         data: {
-            labels: ['masculino', 'feminino', 'Outros'],
+            labels: generos_nomes,
             datasets: [{
-                label: 'Quantgenero de acertos por questao',
-                data: [12, 19, 6],
+                label: 'Quant genero de acertos por questao',
+                data: generos_quantidade,
                 backgroundColor: [
                     'rgb(5,56,104)',
                     'rgb(54, 162, 235)',

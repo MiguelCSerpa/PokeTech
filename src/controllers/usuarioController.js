@@ -79,7 +79,28 @@ function cadastrar(req, res) {
     }
 }
 
+
+function info(req, res) {
+    usuarioModel.info()
+
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao buscar dados do usuario ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    info
 }
