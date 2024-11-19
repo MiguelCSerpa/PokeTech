@@ -103,12 +103,12 @@
 
             }
 
-            
+
             function analisar_nomecompleto() {
 
                 var nome_completo = ipt_Nome_Completo_cadastro.value
                 var tamanho_nome_completo = nome_completo.length;
-                
+
 
 
                 if (tamanho_nome_completo > 50) {
@@ -177,7 +177,7 @@
 
 
             }
-            
+
             function cadastrar() {
 
                 var nome_completo = ipt_Nome_Completo_cadastro.value
@@ -225,7 +225,7 @@
                     })
                         .then(function (resposta) {
                             console.log("resposta: ", resposta);
-
+                            window.location = "login.html"
 
                         })
                         .catch(function (resposta) {
