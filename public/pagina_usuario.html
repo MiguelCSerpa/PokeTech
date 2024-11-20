@@ -94,21 +94,42 @@
         method: "GET",
         headers: {
             "Content-Type": "application/json",
-        }}
-    ).then(function (resposta) {        
+        }
+    }
+    ).then(function (resposta) {
         console.log("resposta: ", resposta);
         resposta.json().then(json => {
-                console.log(json)
-                for (i = 0; i < json.length; i++) {
-                    generos_nomes.push(json[i].genero)
-                    generos_quantidade.push(json[i].quantidade)
-                }
-                });
-     
+            console.log(json)
+            for (i = 0; i < json.length; i++) {
+                generos_nomes.push(json[i].genero)
+                generos_quantidade.push(json[i].quantidade)
+            }
+            const dados_genero = document.getElementById('mychart_genero');
+            console.log(generos_quantidade);
+            new Chart(dados_genero, {
+                type: 'pie',
+                data: {
+                    labels: generos_nomes,
+                    datasets: [{
+                        label: 'Quant genero de acertos por questao',
+                        data: generos_quantidade,
+                        backgroundColor: [
+                            'rgb(5,56,104)',
+                            'rgb(54, 162, 235)',
+                            '#A029A9'
+                        ]
+
+                    }]
+                },
+
+            });
+        });
+
     })
-    .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-    });
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
 
     const dados_acertos = document.getElementById('mychart_acertos');
 
@@ -152,24 +173,6 @@
 
     });
 
-    const dados_genero = document.getElementById('mychart_genero');dados_genero
 
-    new Chart(dados_genero, {
-        type: 'pie',
-        data: {
-            labels: generos_nomes,
-            datasets: [{
-                label: 'Quant genero de acertos por questao',
-                data: generos_quantidade,
-                backgroundColor: [
-                    'rgb(5,56,104)',
-                    'rgb(54, 162, 235)',
-                    '#A029A9'
-                ]
-
-            }]
-        },
-
-    });
 
 </script>
