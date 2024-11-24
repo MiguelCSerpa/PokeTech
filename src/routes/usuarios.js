@@ -17,7 +17,7 @@ router.get("/info/genero", function(req, res){
 })
 
 router.get("/info2/nascimento", function(req, res){
-    usuarioController.info(req,res)
+    usuarioController.info2(req,res)
 })
 
 module.exports = router;

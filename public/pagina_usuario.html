@@ -102,7 +102,7 @@
         console.log("resposta: ", resposta);
         resposta.json().then(json => {
             console.log(json)
-            for (i = 1; i < json.length; i++) {
+            for (i = 0; i < json.length; i++) {
                 generos_nomes.push(json[i].genero)
                 generos_quantidade.push(json[i].quantidade)
             }
@@ -149,9 +149,9 @@
         console.log("resposta: ", resposta);
         resposta.json().then(json => {
             console.log(json)
-            for (i = 1; i < json.length; i++) {
-                idade_faixas.push(json[i].nascimento)
-                idade_quantidade.push(json[i].quantidade)
+            for (i = 0; i < json.length; i++) {
+                idade_faixas.push(json[i].faixa_etaria)
+                idade_quantidade.push(json[i].total_usuarios)
             }
             const dados_idade = document.getElementById('mychart_idade');
             console.log(idade_quantidade);
