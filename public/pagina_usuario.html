@@ -87,6 +87,8 @@
 
 <script>
 
+
+    // grafico genero
     var generos_nomes = [];
     var generos_quantidade = [];
 
@@ -100,7 +102,7 @@
         console.log("resposta: ", resposta);
         resposta.json().then(json => {
             console.log(json)
-            for (i = 0; i < json.length; i++) {
+            for (i = 1; i < json.length; i++) {
                 generos_nomes.push(json[i].genero)
                 generos_quantidade.push(json[i].quantidade)
             }
@@ -111,7 +113,7 @@
                 data: {
                     labels: generos_nomes,
                     datasets: [{
-                        label: 'Quant genero por questao',
+                        label: 'Quant genero',
                         data: generos_quantidade,
                         backgroundColor: [
                             'rgb(5,56,104)',
@@ -129,6 +131,61 @@
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
+
+
+    // Grafico idade
+
+    var idade_faixas = []
+    var idade_quantidade = []
+
+
+    fetch("/usuarios/info2/nascimento", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }
+    ).then(function (resposta) {
+        console.log("resposta: ", resposta);
+        resposta.json().then(json => {
+            console.log(json)
+            for (i = 1; i < json.length; i++) {
+                idade_faixas.push(json[i].nascimento)
+                idade_quantidade.push(json[i].quantidade)
+            }
+            const dados_idade = document.getElementById('mychart_idade');
+            console.log(idade_quantidade);
+            new Chart(dados_idade, {
+                type: 'pie',
+                data: {
+                    labels: idade_faixas,
+                    datasets: [{
+                        label: 'Faixa etaria',
+                        data: idade_quantidade,
+                        backgroundColor: [
+                            'rgb(5,56,104)',
+                            'rgb(54, 162, 235)',
+                            '#A029A9'
+                        ]
+
+                    }]
+                },
+
+            });
+        });
+
+    })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+
+
+
+
+
+
+
 
 
     const dados_acertos = document.getElementById('mychart_acertos');
@@ -153,25 +210,25 @@
         }
     });
 
-    const dados_idade = document.getElementById('mychart_idade');
+    // const dados_idade = document.getElementById('mychart_idade');
 
-    new Chart(dados_idade, {
-        type: 'pie',
-        data: {
-            labels: ['0-18', '19-30', '30+'],
-            datasets: [{
-                label: 'Quantidade de acertos por questao',
-                data: [12, 19, 3],
-                backgroundColor: [
-                    'rgb(5,56,104)',
-                    'rgb(54, 162, 235)',
-                    '#A029A9'
-                ]
+    // new Chart(dados_idade, {
+    //     type: 'pie',
+    //     data: {
+    //         labels: ['0-18', '19-30', '30+'],
+    //         datasets: [{
+    //             label: 'Quantidade de acertos por questao',
+    //             data: [12, 19, 3],
+    //             backgroundColor: [
+    //                 'rgb(5,56,104)',
+    //                 'rgb(54, 162, 235)',
+    //                 '#A029A9'
+    //             ]
 
-            }]
-        },
+    //         }]
+    //     },
 
-    });
+    // });
 
 
 
