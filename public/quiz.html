@@ -153,7 +153,9 @@
                             <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span>
                         </div>
 
-                        <div style="height: 300px; width: 500px">
+                        <div style="height: 300px; width: 400px; 
+                        justify-content: center; 
+                        align-items: center;">
                             <canvas id="chart_exemplo"></canvas>
                         </div>
 
@@ -223,15 +225,19 @@
                     }]
                 },
                 options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 10,
-                            min: 0
+                    indexAxis: 'y',
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        bar: {
+                            borderWidth: 2,
                         }
-                    }
-                }
+                    },
+                    responsive: true,
+                },
+
             });
+
 
 
 
