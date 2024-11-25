@@ -25,9 +25,11 @@ main {
 a {
   text-decoration: none;
 }
-a:hover{
+
+a:hover {
   text-decoration: underline;
 }
+
 .navbar {
   display: flex;
   background-color: #771212;
@@ -171,7 +173,7 @@ a:hover{
   color: white;
 }
 
-.botao_quiz button:hover{
+.botao_quiz button:hover {
   display: flex;
   width: 60%;
   height: 7vh;
@@ -196,13 +198,44 @@ a:hover{
   width: 100%;
 }
 
-.grafico_barra {
+.div_kpi {
   margin-top: 20px;
   display: flex;
   /* border: 1px solid blue; */
   width: 100%;
   height: 50%;
   justify-content: center;
+}
+
+.kpi_idade {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.kpi_genero {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.moldura_kpi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 13vh;
+  background-color:#771212;
+  border-radius: 15px;
+  transition: margin-bottom 0.4s;
+}
+
+.moldura_kpi:hover {
+  display: flex;
+  /* position: absolute; */
+  margin-bottom: 30px;
 }
 
 .g_idade {
@@ -219,5 +252,4 @@ a:hover{
   width: 50%;
   height: 100%;
   justify-content: center;
-
 }
