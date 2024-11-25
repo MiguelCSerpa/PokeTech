@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>paginaQuiz</title>
     <link rel="stylesheet" href="./assets/css/sylequiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -151,6 +152,11 @@
                             <br><br>
                             <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span>
                         </div>
+
+                        <div style="height: 300px; width: 500px">
+                            <canvas id="chart_exemplo"></canvas>
+                        </div>
+
                         <div class="botoes_de_acao">
                             <div class="botao_reiniciar">
                                 <button onclick="tentar_novamente()">Tentar Novamente</button>
@@ -165,13 +171,10 @@
         </div>
 
     </div>
-
 </body>
 
 </html>
 <script>
-
-
 
     function tentar_novamente() {
         window.location.href = "quiz.html"
@@ -205,9 +208,37 @@
             document.getElementById('div_pergunta' + pergunta_atual).style.display = 'block';
         } else {
             // Retira da pagina a div_contador e a div_voltar_usuario para por no lugar a div_final
+
+            const meuGrafico = document.getElementById('chart_exemplo');
+
+            const chart = new Chart(meuGrafico, {
+                type: 'bar',
+                data: {
+                    labels: ['acertos', 'erros'],
+                    datasets: [{
+                        label: 'Quantidade de acertos por questao',
+                        data: [acertos, erros],
+                        backgroundColor: ['green', 'red'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 10,
+                            min: 0
+                        }
+                    }
+                }
+            });
+
+
+
             document.getElementById('div_contador').style.display = 'none'
             document.getElementById('div_voltar_usuario').style.display = 'none'
             document.getElementById('div_final').style.display = 'block'
+
         }
 
         // Span da pagiana de resultados junto ao contador
