@@ -185,4 +185,34 @@
         });
 
 
+
+    // KPI-GEN
+
+    fetch("/usuarios/kpi_gen/genero", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }
+    ).then(function (resposta) {
+        console.log("resposta: ", resposta);
+        resposta.json().then(json => {
+            console.log(json)
+
+            const generoMaiorQuantidade = json[0].genero;  // Gênero de maior quantidade
+            const porcentagem = json[0].Porcentagem_genero;  // Porcentagem do gênero
+            const quantidade_genero = json[0].quantidade
+
+            // Exibir no KPI
+            document.getElementById('spn_kpi_genero').innerHTML =
+                `${generoMaiorQuantidade}:<br> ${quantidade_genero} usuários <br>(${porcentagem}%)`;
+        });
+
+    })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+
+
 </script>

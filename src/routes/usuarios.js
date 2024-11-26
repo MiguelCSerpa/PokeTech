@@ -20,4 +20,8 @@ router.get("/info2/nascimento", function(req, res){
     usuarioController.info2(req,res)
 })
 
+router.get("/kpi_gen/genero", function(req, res){
+    usuarioController.kpi_gen(req,res)
+})
+
 module.exports = router;

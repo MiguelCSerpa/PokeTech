@@ -189,6 +189,7 @@ a:hover {
   width: 100%;
   height: 100vh;
   flex-direction: column;
+  overflow:hidden;
 }
 
 .gaficos_pizza {
@@ -230,6 +231,8 @@ a:hover {
   background-color:#771212;
   border-radius: 15px;
   transition: margin-bottom 0.4s;
+  font-size: 23px;
+  color: white;
 }
 
 .moldura_kpi:hover {

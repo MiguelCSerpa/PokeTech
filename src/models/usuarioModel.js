@@ -50,9 +50,23 @@ function info2() {
     return database.executar(instrucaoSql);
 }
 
+function kpi_gen() {
+
+    var instrucaoSql = `
+    SELECT COUNT(*) as quantidade,genero,
+    Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100), 1) 
+    as 'Porcentagem_genero' 
+    FROM Usuario group by genero order by quantidade desc LIMIT 1;
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
     info,
-    info2
+    info2,
+    kpi_gen
 };
