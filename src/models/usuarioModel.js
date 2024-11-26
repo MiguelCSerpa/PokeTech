@@ -25,7 +25,7 @@ function cadastrar(nome, email, genero, nascimento, senha) {
 function info() {
 
     var instrucaoSql = `
-       SELECT genero,COUNT(genero) AS quantidade FROM Usuario GROUP BY genero;
+       SELECT genero,Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100),1)AS quantidade FROM Usuario GROUP BY genero;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -41,7 +41,7 @@ function info2() {
         WHEN TIMESTAMPDIFF(YEAR, u.nascimento, CURDATE()) BETWEEN 19 AND 30 THEN '19-30'
         WHEN TIMESTAMPDIFF(YEAR, u.nascimento, CURDATE()) >= 31 THEN '31+'
         END AS faixa_etaria,
-        COUNT(*) AS total_usuarios
+        Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100),1) AS total_usuarios
         FROM Usuario u
         GROUP BY faixa_etaria;
     `;
@@ -53,10 +53,7 @@ function info2() {
 function kpi_gen() {
 
     var instrucaoSql = `
-    SELECT COUNT(*) as quantidade,genero,
-    Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100), 1) 
-    as 'Porcentagem_genero' 
-    FROM Usuario group by genero order by quantidade desc LIMIT 1;
+ SELECT COUNT(idUsuario) + 1 AS totalUsuarios FROM Usuario;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
