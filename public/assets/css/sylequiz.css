@@ -295,6 +295,10 @@ body {
     display: none;
 }
 
+#spn_stats{
+    font-size: 22px;
+}
+
 #div_final {
     display: none;
 }

@@ -150,7 +150,9 @@
                         <div class="frase_f">
                             <p> De um total de 10 Questões você obteve:</p>
                             <br><br>
-                            <span>Acertos: <span id="spn_acertos"></span> | Erros: <span id="spn_erros"></span></span>
+                            <span id="spn_stats">Acertos: <span id="spn_acertos"></span> | Erros: <span
+                                    id="spn_erros"></span> |
+                                Aproveitamento <span id="spn_aproveitamento"></span></span>
                         </div>
 
                         <div style="height: 300px; width: 400px; 
@@ -191,9 +193,11 @@
     var acertos = 0
     var erros = 0
 
+
+
     function proxima_pergunta(perguntaAtual, resposta) {
 
-        // Verifia se a resposta está correta
+        // Verifica se a resposta está correta
         if (resposta == lista_respostas_corretas[perguntaAtual]) {
             acertos++
         } else {
@@ -226,8 +230,6 @@
                 },
                 options: {
                     indexAxis: 'y',
-                    // Elements options apply to all of the options unless overridden in a dataset
-                    // In this case, we are setting the border of each horizontal bar to be 2px wide
                     elements: {
                         bar: {
                             borderWidth: 2,
@@ -239,11 +241,18 @@
             });
 
 
-
-
             document.getElementById('div_contador').style.display = 'none'
             document.getElementById('div_voltar_usuario').style.display = 'none'
             document.getElementById('div_final').style.display = 'block'
+
+        }
+        var aproveitamento = (acertos / 10) * 100
+
+        if (aproveitamento < 50) {
+            document.getElementById('spn_aproveitamento').style = 'color:red'
+
+        } else {
+            document.getElementById('spn_aproveitamento').style = 'color:green'
 
         }
 
@@ -251,6 +260,8 @@
         document.getElementById('spn_contador').innerHTML = `${pergunta_atual}`
         document.getElementById('spn_acertos').innerHTML = `${acertos}`
         document.getElementById('spn_erros').innerHTML = `${erros}`
+        document.getElementById('spn_aproveitamento').innerHTML = `${aproveitamento}%`
+
     }
 
 

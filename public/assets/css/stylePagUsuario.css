@@ -233,6 +233,7 @@ a:hover {
   transition: margin-bottom 0.4s;
   font-size: 23px;
   color: white;
+  text-align: center;
 }
 
 .moldura_kpi:hover {

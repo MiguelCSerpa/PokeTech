@@ -128,6 +128,18 @@
 
                     }]
                 },
+                options: {
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    let value = tooltipItem.raw;
+                                    return 'Genero: ' + value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
 
             });
         });
@@ -142,7 +154,7 @@
 
     var idade_faixas = []
     var idade_quantidade = []
-
+    var porcent = '%'
 
     fetch("/usuarios/info2/nascimento", {
         method: "GET",
@@ -165,18 +177,29 @@
                 data: {
                     labels: idade_faixas,
                     datasets: [{
-                        label: 'Faixa etaria',
+                        label: 'Faixa etária',
                         data: idade_quantidade,
                         backgroundColor: [
                             'rgb(5,56,104)',
                             'rgb(54, 162, 235)',
                             '#A029A9'
                         ]
-
                     }]
                 },
-
+                options: {
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    let value = tooltipItem.raw;
+                                    return 'Faixa etária: ' + value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
             });
+
         });
 
     })
@@ -204,7 +227,7 @@
 
             // Exibir no KPI
             document.getElementById('spn_kpi_genero').innerHTML =
-                `Quantidade Usuarios:<br>${PessoasQuantidade}`
+                `Total Usuarios:<br>${PessoasQuantidade}`
         });
 
     })
