@@ -51,8 +51,8 @@
                         <div class="kpi_idade">
                             <div class="moldura_kpi"><span id="spn_kpi_idade"></span></div>
                         </div>
-                        <div class="kpi_genero">
-                            <div class="moldura_kpi"><span id="spn_kpi_genero"></span></div>
+                        <div class="kpi_total">
+                            <div class="moldura_kpi"><span id="spn_kpi_total"></span></div>
                         </div>
                     </div>
                     <div class="gaficos_pizza">
@@ -63,7 +63,6 @@
                             <canvas id="mychart_genero"></canvas>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
@@ -92,6 +91,9 @@
 
 <script>
 
+    var qtdMasculino = 0
+    var qtdFeminino = 0
+    var qtdNi = 0
 
     // grafico genero
     var generos_nomes = [];
@@ -125,7 +127,6 @@
                             'rgb(54, 162, 235)',
                             '#A029A9'
                         ]
-
                     }]
                 },
                 options: {
@@ -142,6 +143,8 @@
                 }
 
             });
+
+
         });
 
     })
@@ -149,12 +152,10 @@
             console.log(`#ERRO: ${resposta}`);
         });
 
-
     // Grafico idade
 
     var idade_faixas = []
     var idade_quantidade = []
-    var porcent = '%'
 
     fetch("/usuarios/info2/nascimento", {
         method: "GET",
@@ -170,6 +171,7 @@
                 idade_faixas.push(json[i].faixa_etaria)
                 idade_quantidade.push(json[i].total_usuarios)
             }
+
             const dados_idade = document.getElementById('mychart_idade');
             console.log(idade_quantidade);
             new Chart(dados_idade, {
@@ -201,7 +203,6 @@
             });
 
         });
-
     })
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
@@ -226,7 +227,7 @@
 
 
             // Exibir no KPI
-            document.getElementById('spn_kpi_genero').innerHTML =
+            document.getElementById('spn_kpi_total').innerHTML =
                 `Total Usuarios:<br>${PessoasQuantidade}`
         });
 
@@ -234,7 +235,6 @@
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-
 
 
 </script>
