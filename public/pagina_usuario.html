@@ -51,15 +51,20 @@
                         <div class="kpi_idade">
                             <div class="moldura_kpi"><span id="spn_kpi_idade"></span></div>
                         </div>
+                        <div class="kpi_idade">
+                            <div class="moldura_kpi"><span id="spn_kpi_genero"></span></div>
+                        </div>
                         <div class="kpi_total">
                             <div class="moldura_kpi"><span id="spn_kpi_total"></span></div>
                         </div>
                     </div>
                     <div class="gaficos_pizza">
                         <div class="g_idade">
+                            <h3>Porcentagem Faixa etária:</h3>
                             <canvas id="mychart_idade"></canvas>
                         </div>
                         <div class="g_genero">
+                            <h3>Porcentagem Genero:</h3>
                             <canvas id="mychart_genero"></canvas>
                         </div>
                     </div>
@@ -141,14 +146,16 @@
 
             });
 
-
+            document.getElementById('spn_kpi_genero').innerHTML = 'Genero predominante: ' + generos_nomes[0];
+            
+            
         });
-
+        
     })
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-
+        
     // Grafico idade
 
     var idade_faixas = []
@@ -198,6 +205,7 @@
                     }
                 }
             });
+            document.getElementById('spn_kpi_idade').innerHTML = 'Faixa predominante: ' + idade_faixas[0];
 
         });
     })

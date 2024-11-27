@@ -25,10 +25,11 @@ function cadastrar(nome, email, genero, nascimento, senha) {
 function info() {
 
     var instrucaoSql = `
-       SELECT genero, Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100),1)AS quantidade FROM Usuario GROUP BY genero;
+       SELECT genero, Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100),1)AS quantidade FROM Usuario GROUP BY genero ORDER BY quantidade DESC;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    console.log(database.executar(instrucaoSql));
     return database.executar(instrucaoSql);
 }
 
@@ -43,7 +44,7 @@ function info2() {
         END AS faixa_etaria,
         Truncate((COUNT(*) / (SELECT COUNT(*) FROM Usuario)*100),1) AS total_usuarios
         FROM Usuario u
-        GROUP BY faixa_etaria;
+        GROUP BY faixa_etaria ORDER BY total_usuarios DESC;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);

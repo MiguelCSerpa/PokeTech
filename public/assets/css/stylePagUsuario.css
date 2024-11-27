@@ -246,14 +246,18 @@ a:hover {
   display: flex;
   width: 50%;
   /* border: 1px red solid; */
-  height: 100%;
+  height: 80%;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .g_genero {
   display: flex;
   /* border: 1px red solid; */
   width: 50%;
-  height: 100%;
+  height: 80%;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
