@@ -437,9 +437,9 @@ a:hover {
 
 .moldura-foto {
   display: flex;
-  width: 70%;
-  height: 80%;
-  background-image: url("../IMG/para\ o\ git.jfif");
+  width: 100%;
+  height: 60%;
+  background-image: url("../IMG/foto_sobre_mimAtualizada.png");
   background-size: cover;
   border-radius: 10px;
 }

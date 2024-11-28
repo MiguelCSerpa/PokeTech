@@ -54,7 +54,7 @@ function info2() {
 function kpi_gen() {
 
     var instrucaoSql = `
- SELECT COUNT(idUsuario) + 1 AS totalUsuarios FROM Usuario;
+ SELECT COUNT(idUsuario) AS totalUsuarios FROM Usuario;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
